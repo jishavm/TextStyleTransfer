@@ -1,0 +1,113 @@
+------------------------------------------------
+{   'batch_size': 64,
+    'beam': 1,
+    'dev': '../data/yelp/sentiment.dev',
+    'dim_emb': 100,
+    'dim_y': 200,
+    'dim_z': 500,
+    'dropout_keep_prob': 0.5,
+    'embedding': '',
+    'filter_sizes': '1,2,3,4,5',
+    'gamma_decay': 1,
+    'gamma_init': 0.1,
+    'gamma_min': 0.1,
+    'learning_rate': 0.0001,
+    'load_model': False,
+    'max_epochs': 60,
+    'max_seq_length': 20,
+    'max_train_size': -1,
+    'model': '../tmp/model',
+    'n_filters': 128,
+    'n_layers': 1,
+    'online_testing': False,
+    'output': '../tmp/lst.dev',
+    'rho': 1,
+    'steps_per_checkpoint': 1000,
+    'test': '',
+    'train': '../data/yelp/sentiment.train',
+    'vocab': '../tmp/lst.vocab'}
+------------------------------------------------
+#sents of training file 0: 18395
+#sents of training file 1: 18395
+#sents of training file 0: 1218
+#sents of training file 1: 1218
+#sents of training file 0: 1462
+#sents of training file 1: 1462
+vocabulary size: 4880
+WARNING:tensorflow:From /project/p1/code/DGM/LST_Shakespeare/language-style-transfer/LST_Shakespeare_venv/local/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From nn.py:8: __init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.GRUCell, and will be replaced by that in Tensorflow 2.0.
+WARNING:tensorflow:From style_transfer.py:72: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+WARNING:tensorflow:From /project/p1/code/DGM/LST_Shakespeare/language-style-transfer/LST_Shakespeare_venv/local/lib/python2.7/site-packages/tensorflow/python/ops/rnn_cell_impl.py:1259: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From style_transfer.py:98: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /project/p1/code/DGM/LST_Shakespeare/language-style-transfer/LST_Shakespeare_venv/local/lib/python2.7/site-packages/tensorflow/python/ops/array_grad.py:425: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /project/p1/code/DGM/LST_Shakespeare/language-style-transfer/LST_Shakespeare_venv/local/lib/python2.7/site-packages/tensorflow/python/ops/math_grad.py:102: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+Creating model with fresh parameters.
+--------------------epoch 1--------------------
+learning_rate: 0.0001   gamma: 0.1
+dev loss 71.65, rec 69.10, adv 2.55, d0 1.15, d1 1.19
+saving model...
+--------------------epoch 2--------------------
+learning_rate: 0.0001   gamma: 0.1
+dev loss 69.50, rec 67.08, adv 2.42, d0 0.95, d1 0.93
+saving model...
+--------------------epoch 3--------------------
+learning_rate: 0.0001   gamma: 0.1
+dev loss 66.92, rec 65.44, adv 1.48, d0 1.12, d1 1.38
+saving model...
+--------------------epoch 4--------------------
+learning_rate: 0.0001   gamma: 0.1
+step 1000, time 111s, loss 68.84, rec 66.67, adv 2.17, d0 1.15, d1 1.25
+dev loss 65.17, rec 63.61, adv 1.56, d0 1.33, d1 1.20
+saving model...
+--------------------epoch 5--------------------
+learning_rate: 0.0001   gamma: 0.1
+dev loss 64.54, rec 62.81, adv 1.74, d0 1.18, d1 1.20
+saving model...
+--------------------epoch 6--------------------
+learning_rate: 0.0001   gamma: 0.1
+dev loss 63.64, rec 62.08, adv 1.55, d0 1.21, d1 1.27
+saving model...
+--------------------epoch 7--------------------
+learning_rate: 0.0001   gamma: 0.1
+step 2000, time 210s, loss 63.40, rec 60.75, adv 2.65, d0 1.03, d1 1.15
+dev loss 63.55, rec 61.36, adv 2.20, d0 1.20, d1 1.13
+saving model...
+--------------------epoch 8--------------------
+learning_rate: 0.0001   gamma: 0.1
+dev loss 64.47, rec 61.56, adv 2.91, d0 1.45, d1 1.39
+--------------------epoch 9--------------------
+learning_rate: 0.0001   gamma: 0.1
+dev loss 62.64, rec 60.32, adv 2.32, d0 1.23, d1 1.19
+saving model...
+--------------------epoch 10--------------------
+learning_rate: 0.0001   gamma: 0.1
+dev loss 61.93, rec 59.78, adv 2.15, d0 1.32, d1 1.13
+saving model...
+--------------------epoch 11--------------------
+learning_rate: 0.0001   gamma: 0.1
+step 3000, time 309s, loss 61.23, rec 58.61, adv 2.62, d0 1.03, d1 1.15
+dev loss 61.88, rec 59.90, adv 1.98, d0 1.27, d1 1.20
+saving model...
+--------------------epoch 12--------------------
+learning_rate: 0.0001   gamma: 0.1
+dev loss 61.26, rec 59.31, adv 1.96, d0 1.13, d1 1.17
+saving model...
+--------------------epoch 13--------------------
+learning_rate: 0.0001   gamma: 0.1
+dev loss 61.65, rec 59.40, adv 2.25, d0 1.16, d1 1.08
+--------------------epoch 14--------------------
+learning_rate: 0.0001   gamma: 0.1
